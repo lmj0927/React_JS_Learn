@@ -16,7 +16,6 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
-
   return (
     <div>
       {loading ? (
@@ -27,6 +26,7 @@ function Home() {
             <Movie
               key={movie.id}
               id={movie.id}
+              url={movie.url}
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
